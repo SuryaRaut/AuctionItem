@@ -9,11 +9,11 @@ import java.util.Set;
 @Entity
 public class AuctionModel {
     @Id
-    @Column()
+    @Column(name = "auctionId")
     private Integer auctionId;
     private String currentBid;
     private String reservePrice;
-
+    @Embedded
     public AuctionDTO  item;
     //    @OneToMany(fetch = FetchType.LAZY,
 //            cascade = CascadeType.ALL,
