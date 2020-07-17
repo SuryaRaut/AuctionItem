@@ -46,14 +46,6 @@ public class AuctionServiceTest {
         verify(auctionRepo, times(1)).existsById( anyInt() );
         verify(auctionRepo, times(1)).findById( anyInt() );
     }
-//    when(bidRepo.existsById( anyInt() ) ).thenReturn(true);
-//    when(bidRepo.findById( anyInt() ) ).thenReturn(Optional.ofNullable( new BidModel() ) );
-//
-//    BidModel bidResponse = bidService.getBid(1);
-//        Assertions.assertNotNull(bidResponse);
-//
-//    verify(bidRepo, times(1)).existsById( anyInt() );
-//    verify(bidRepo, times(1)).findById( anyInt() );
     @Test
     public void shouldPostAuction() {
         when(auctionRepo.findById( anyInt() ) ).thenReturn(createAuctionModel());
